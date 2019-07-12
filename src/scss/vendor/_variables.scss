@@ -1,0 +1,41 @@
+    $white:                       #fff !default;
+$gray-100:                    #f8f9fa !default;
+    $gray-200:                    #e9ecef !default;
+$gray-400:                    #ced4da !default;
+    $gray-700:                    #495057 !default;
+    $black:                       #000 !default;
+
+    $line-height-sm:              1.5 !default;
+
+    $enable-rounded:                              true !default;
+    $enable-shadows:                              false !default;
+    $enable-transitions:                          true !default;
+    $enable-prefers-reduced-motion-media-query:   true !default;
+
+    $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+    $font-size-sm:                $font-size-base * .875 !default;
+    $font-weight-normal:          400 !default;
+    $line-height-base:            1.5 !default;
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
+    $input-btn-font-family:       null !default;
+$border-width:                1px !default;
+    $border-radius:               .25rem !default;
+
+    $input-btn-font-size:         $font-size-base !default;
+    $font-weight-base:            $font-weight-normal !default;
+    $input-btn-line-height:       $line-height-base !default;
+$input-btn-border-width:      $border-width !default;
+
+    $input-padding-y:                       $input-btn-padding-y !default;
+    $input-padding-x:                       $input-btn-padding-x !default;
+    $input-font-family:                     $input-btn-font-family !default;
+    $input-font-size:                       $input-btn-font-size !default;
+    $input-font-weight:                     $font-weight-base !default;
+    $input-line-height:                     $input-btn-line-height !default;
+    $input-color:                           $gray-700 !default;
+    $input-bg:                              $white !default;
+$input-border-width:                    $input-btn-border-width !default;
+$input-border-color:                    $gray-400 !default;
+$input-border-radius:                   $border-radius !default;
+$input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;

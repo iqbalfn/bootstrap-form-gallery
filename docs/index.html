@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css">
+    <link rel="stylesheet" href="css/bootstrap-form-gallery.css">
+
+    <title>Bootstrap Form Gallery</title>
+
+    <style>
+        h1{ margin-top: 80px; }
+        h2,h3{ margin-top: 40px; }
+        .example{ border: 4px solid #eee; margin-bottom:30px;}
+        .example-preview{ padding: 1.5rem; }
+        .example > pre{ border-top: 4px solid #eee;margin:0; }
+        .no-html{ display: none; }
+        .highlihgt-grid .row + .row{ margin-top: 1rem;}
+        .highlihgt-grid [class^="col-"]{
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid rgba(86,61,124,.2);
+        }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-1746437125043617",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap Form Gallery</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-form-gallery">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-form-gallery/archive/master.zip">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Form Gallery</h1>
+                <p class="lead">Use Bootstrap's JavaScript form gallery plugin to add image picker/preview in your regular form which hold multiple image at once.</p>
+
+                <p>This plugin do not handle file picker, or file upload, and image previewer. You need to define function for image picker, and previewer ( if any ).</p>
+
+                <section>
+                    <h2>Examples</h2>
+                    <article>
+                        <section>
+                            <h3>Form Gallery Components</h3>
+
+                            <article>
+                                <p>This is an example of form gallery component with preset images as default value. Clicking the image will do nothing as we do not define image previewer.</p>
+                                <p>You can change total item per row up to 5 by using class <code>.formgallery-list-five</code>.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <div style="width:20rem">
+                                            <div class="form-group">
+                                                <label for="fga-1">Images</label>
+                                                <textarea id="input-images" class="formgallery-model">
+                                                    
+                                                    [
+                                                        "img/annie-spratt.jpg",
+                                                        "img/jason-strull.jpg",
+                                                        "img/luca-bravo.jpg",
+                                                        "img/muneeb-syed.jpg",
+                                                        "img/timj.jpg",
+                                                        "img/vladimir-kudinov.jpg"
+                                                    ]
+                                                </textarea>
+                                                <div class="formgallery" id="fg-1" data-model="#input-images">
+                                                    <div class="formgallery-list formgallery-list-three">
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/annie-spratt.jpg)">
+                                                            </a>
+                                                        </div>
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/jason-strull.jpg)">
+                                                            </a>
+                                                        </div>
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/luca-bravo.jpg)">
+                                                            </a>
+                                                        </div>
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/muneeb-syed.jpg)">
+                                                            </a>
+                                                        </div>
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/timj.jpg)">
+                                                            </a>
+                                                        </div>
+                                                        <div class="formgallery-item">
+                                                            <button type="button" class="close formgallery-remove" aria-label="Close" title="Remove">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            <a href="#" class="formgallery-image" style="background-image: url(img/vladimir-kudinov.jpg)">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-light formgallery-action">
+                                                        Add Image
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
+                </section>
+
+                <section>
+                    <h2>Usage</h2>
+                    <article>
+                        <p>The form gallery plugin component make it easy for user to select images instead of browser default input form control. The original image URL saved in the model element. Any change to the model will update the component only if the element already initialize manually.</p>
+
+                        <p>Initialization can be done with js or by element attribute.</p>
+
+                        <section>
+                            <h3>Via JavaScript</h3>
+                            <article>
+                                <p>Call a form gallery with id <code>myFormGallery</code> with a single line of JavaScript</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#myFormGallery').formgallery(options);
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Options</h3>
+                            <article>
+                                <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-maxsize=""</code>.</p>
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>imagePicker</td>
+                                            <td>function</td>
+                                            <td><code>cb => cb([prompt('Image URL')])</code></td>
+                                            <td>
+                                                <p>Function to call when user click the <code>Add Images</code> button. You've to provide this function by your self. This module not provide any. If the value is a string, it will try to find it from <code>window</code> method ( TODO ).</p>
+                                                <p>The function get called with parameter function <code>cb</code> as the first argument, and object <code>formgallery</code> as the second argument.</p>
+                                                <p>The callback function expect to be called with the first parameter as array list of image.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>imagePreviewer</td>
+                                            <td>boolean|function</td>
+                                            <td>true</td>
+                                            <td>
+                                                <p>Function to call when user click any of exists image. It means to show some kind of image previewer. The function will be called with array list of image as the first parameter, and index of the clicked image as the second parameter.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Methods</h3>
+
+                            <article>
+                                <h4><code>.formgallery(options)</code></h4>
+                                <p>Activate your content as a form gallery component. Accept an optional options <code>object</code>.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery').formgallery({
+                                            imagePicker    : cb => cb([{...}]),
+                                            imagePreviewer : (urls, index) => alert(url[index])
+                                        })
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.addImage(URL)</code></h4>
+                                <p>Add new image to the collection.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery')
+                                            .data('bs.formgallery')
+                                            .addImage(URL)
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.clear()</code></h4>
+                                <p>Back to empty state, and remove the value of the model.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery')
+                                            .data('bs.formgallery')
+                                            .clear()
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.preview(index)</code></h4>
+                                <p>Execute preview callback and index of image as the first parameter.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery')
+                                            .data('bs.formgallery')
+                                            .preview(0)
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.pick()</code></h4>
+                                <p>Execute image picker callback.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery')
+                                            .data('bs.formgallery')
+                                            .pick()
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.remove(index)</code></h4>
+                                <p>Remove an image from collection by index number of the image.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-gallery')
+                                            .data('bs.formgallery')
+                                            .remove(index)
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Events</h3>
+                            <p>Bootstrap's form gallery class exposes a few events for hooking into form gallery functionality. All form gallery events are fired at the form gallery container itself (i.e at the <code>&lt;div class="formgallery"&gt;</code>).</p>
+
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr><th>Event Type</th><th>Description</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>add.bs.formgallery</td>
+                                        <td>This event fires immediately when new image is about to add to the collection. It's when model value not yet change, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>added.bs.formgallery</td>
+                                        <td>This event fires immediately when new image just added to the collection. It's when model value changed, and the view already updated. The <code>change.bs.formgallery</code> called right after this.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>change.bs.formgallery</td>
+                                        <td>This event fires immediately when data in model changes. It's when model value already changed, and the view already updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>delete.bs.formgallery</td>
+                                        <td>This event fires immediately when an image is about to remove from the model. It's when model value not yet changed, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>deleted.bs.formgallery</td>
+                                        <td>This event fires immediately when an image just removed from model. It's when model value changed, and the view already updated. The <code>change.bs.formgallery</code> called right after this.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>clear.bs.formgallery</td>
+                                        <td>This event fires immediately when model value truncated to an empty array string. It's when model value not yet changed, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cleared.bs.formgallery</td>
+                                        <td>This event fires immediately when the model value truncated. It's when model value changed, and the view already updated. The <code>change.bs.formgallery</code> called right after this.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="example">
+                                <div class="example-preview source-code no-html" data-hl="js">
+                                    $('#my-form-gallery').on('added.bs.formgallery', function(e){
+                                        // do something...
+                                    })
+                                </div>
+                            </div>
+                        </section>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js" data-manual></script>
+    <script src="js/source.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-form-gallery.js"></script>
+
+    <script>
+        $('.formgallery').on('add.bs.formgallery added.bs.formgallery change.bs.formgallery delete.bs.formgallery deleted.bs.formgallery clear.bs.formgallery cleared.bs.formgallery', function(e){
+            console.log(e.type)
+        })
+    </script>
+</body>
+</html>

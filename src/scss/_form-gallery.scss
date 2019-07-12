@@ -1,0 +1,103 @@
+.formgallery-model{
+    display: none;
+}
+
+.formgallery{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: $formgallery-height;
+    background-clip: padding-box;
+    border: $formgallery-border-width solid $formgallery-border-color;
+    @include border-radius($formgallery-border-radius, 0);
+    @include box-shadow($formgallery-box-shadow);
+}
+
+.formgallery-list{
+    @include border-top-radius($formgallery-border-radius);
+    padding: $formgallery-padding-y $formgallery-padding-x;
+    flex: 1;
+    overflow: auto;
+    font-size: 0;
+}
+.formgallery-list-one{
+    .formgallery-item{
+        width: 100%;
+        padding-top: 50%;
+    }
+}
+.formgallery-list-two{
+    padding-left: 0;
+
+    .formgallery-item{
+        width: calc(50% - #{$formgallery-padding-x});
+        padding-top: calc(50% - #{$formgallery-padding-x});
+        margin-left: $formgallery-padding-x;
+    }
+}
+.formgallery-list-three{
+    padding-left: 0;
+
+    .formgallery-item{
+        width: calc(33.333% - #{$formgallery-padding-x});
+        padding-top: calc(33.333% - #{$formgallery-padding-x});
+        margin-left: $formgallery-padding-x;
+    }
+}
+.formgallery-list-four{
+    padding-left: 0;
+
+    .formgallery-item{
+        width: calc(25% - #{$formgallery-padding-x});
+        padding-top: calc(25% - #{$formgallery-padding-x});
+        margin-left: $formgallery-padding-x;
+    }
+}
+.formgallery-list-five{
+    padding-left: 0;
+
+    .formgallery-item{
+        width: calc(20% - #{$formgallery-padding-x});
+        padding-top: calc(20% - #{$formgallery-padding-x});
+        margin-left: $formgallery-padding-x;
+    }
+}
+
+.formgallery-item{
+    margin-bottom: $formgallery-padding-y;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    font-size: $font-size-base;
+}
+
+.formgallery-image{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include transition($formgallery-image-transition);
+
+    &:hover{
+        opacity: .5;
+    }
+}
+
+.formgallery-action{
+    border-left: 0 none;
+    border-right: 0 none;
+    border-bottom: 0 none;
+}
+
+.formgallery-remove{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 1000;
+}
