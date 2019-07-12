@@ -21,6 +21,7 @@
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   padding: 0.75rem 0.75rem;
+  letter-spacing: 0;
   flex: 1;
   overflow: auto;
   font-size: 0;

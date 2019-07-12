@@ -16,6 +16,7 @@
 .formgallery-list{
     @include border-top-radius($formgallery-border-radius);
     padding: $formgallery-padding-y $formgallery-padding-x;
+    letter-spacing: 0;
     flex: 1;
     overflow: auto;
     font-size: 0;
