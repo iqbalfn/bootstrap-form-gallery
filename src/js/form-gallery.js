@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap Form Gallery (v0.0.1): form-gallery.js
+ * Bootstrap Form Gallery (v0.0.2): form-gallery.js
  * --------------------------------------------------------------------------
  */
 
@@ -14,7 +14,7 @@ import Util from './util'
  */
 
  const NAME               = 'formgallery'
- const VERSION            = '0.0.1'
+ const VERSION            = '0.0.2'
  const DATA_KEY           = 'bs.formgallery'
  const EVENT_KEY          = `.${DATA_KEY}`
  const DATA_API_KEY       = '.data-api'
@@ -107,7 +107,7 @@ class FormGallery {
     clear(){
         $(this._element).trigger(Event.CLEAR)
 
-        this._model.value     = '[]'
+        this._model.value     = ''
         this._value           = []
         this._list.innerHTML  = ''
 
@@ -138,7 +138,7 @@ class FormGallery {
 
         $(this._element).trigger(Event.DELETE, item)
         this._value.splice(index, 1)
-        this._model.value = JSON.stringify(this._value)
+        this._model.value = this._value.length ? JSON.stringify(this._value) : ''
 
         let itemEl = $(this._list).children()[index]
         itemEl.classList.add(ClassName.HIDE)

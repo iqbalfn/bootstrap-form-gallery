@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap Form Gallery v0.0.1 (https://iqbalfn.github.io/bootstrap-form-gallery/)
+  * Bootstrap Form Gallery v0.0.2 (https://iqbalfn.github.io/bootstrap-form-gallery/)
   * Copyright 2019 Iqbal Fauzi
   * Licensed under MIT (https://github.com/iqbalfn/bootstrap-form-gallery/blob/master/LICENSE)
   */
@@ -223,7 +223,7 @@
    */
 
   var NAME = 'formgallery';
-  var VERSION = '0.0.1';
+  var VERSION = '0.0.2';
   var DATA_KEY = 'bs.formgallery';
   var EVENT_KEY = "." + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -304,7 +304,7 @@
 
     _proto.clear = function clear() {
       $(this._element).trigger(Event.CLEAR);
-      this._model.value = '[]';
+      this._model.value = '';
       this._value = [];
       this._list.innerHTML = '';
       $(this._element).trigger(Event.CLEARED);
@@ -334,7 +334,7 @@
 
       this._value.splice(index, 1);
 
-      this._model.value = JSON.stringify(this._value);
+      this._model.value = this._value.length ? JSON.stringify(this._value) : '';
       var itemEl = $(this._list).children()[index];
       itemEl.classList.add(ClassName.HIDE);
       $(itemEl).remove();
